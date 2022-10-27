@@ -50,6 +50,7 @@ class GoogleSpreadsheet:
         for row in arr:
             s = ""
             for item in row:
+                item = item.replace(".git","")
                 s += f'{item},'
 
             file.write(f'{s}\n')

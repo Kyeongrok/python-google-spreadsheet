@@ -15,11 +15,11 @@ if __name__ == '__main__':
     gs = GoogleSpreadsheet(sheet_url)
     student_list = gs.read_saved_student_repo_list()
     repo_sheet_target_columnNo = 2
-    # gs.update_student_list()
+    gs.update_student_list()
     # r = gs.crawl_and_parse(student_list[0][repo_sheet_target_columnNo])
     # html_text = open('github_commit_page2.html', encoding='utf-8').read()
     # print(parse(html_text))
-    for arr in student_list[:50]:
+    for arr in student_list:
         try:
             # Thread(target=run, args=(arr[0], arr[repo_sheet_target_columnNo])).start()
             run(arr[0], arr[repo_sheet_target_columnNo])
