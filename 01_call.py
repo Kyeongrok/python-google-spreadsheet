@@ -29,6 +29,12 @@ class GoogleSpreadsheet:
         r = parse(html_str)
         print(r)
 
+    def save_to_csv(self, arr):
+        # todo
+        # google spreadsheet에서 받은 arr을 csv로 convert한 후 파일로 저장
+        # gs api call을 줄이기 위함
+        pass
+
     def writeRange(self, sheet_name, range):
         sh = self.workbook.worksheet(sheet_name)
 
