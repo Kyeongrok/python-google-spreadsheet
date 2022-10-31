@@ -34,7 +34,7 @@ class GoogleSpreadsheet:
         url = base_url + "/commits"
         res = requests.get(url, params=params)
         print(res, url)
-        return res.text
+        return res
 
     def crawl_and_parse(self, giturl):
         html_str = self.crawl(giturl)
