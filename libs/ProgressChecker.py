@@ -56,7 +56,7 @@ class GoogleSpreadsheet:
             file.write(f'{s}\n')
 
     def update_student_list(self, sheet_name='repositories'):
-        repositories_arr = self.read(sheet_name, 'A2:D88')
+        repositories_arr = self.read(sheet_name, 'A2:G88')
         self.save_to_csv(repositories_arr)
         print(f"google spreadsheet {sheet_name} 을 참조하여 student_list.csv를 업데이트 했습니다.")
 
