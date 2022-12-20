@@ -9,11 +9,13 @@ class GoogleSpreadsheet:
     workbook = None
 
     def __init__(self, sheet_url):
+        # 불러오고싶은 sheet의 url을 입력 합니다.
         self.sheet_url = sheet_url
 
     def read(self, sheet_name, range):
         '''
-        구글스프레드시트에서 불러오기
+        :param sheet_name: 시트명
+        :param range: 불러올 범위
         '''
         if self.workbook == None:
             self.workbook = self.gc.open_by_url(self.sheet_url)
